@@ -49,7 +49,6 @@ export default function ChatBot() {
 };
 
 
-
   return (
     <div className="p-4 border rounded shadow w-full max-w-md">
       <div className="h-64 overflow-y-scroll mb-4 border p-2 bg-gray-100 rounded">
