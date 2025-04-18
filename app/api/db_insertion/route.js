@@ -2,14 +2,14 @@ import { supabase } from '../../lib/supabaseClient'
 import { NextResponse } from 'next/server'
 
 export async function POST(req) {
-  const { message, source } = await req.json()
+  const { message, source ,  chatId} = await req.json()
 
   try {
     // ✅ Perform the insert directly
     const { data, error } = await supabase
       .from('messages')
       .insert([
-        { message: message, source: source}
+        { message: message, source: source, chatid: chatId}
       ])
 
     if (error) {
